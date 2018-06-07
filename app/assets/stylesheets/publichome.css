@@ -14,9 +14,18 @@
  *= require publichomecss/settings
  *= require publichomecss/layers
  *= require publichomecss/navigation
+ *= require publichomecss/font-awesome
+ *= require publichomecss/flaticon
+ *= require publichomecss/animate
+ *= require publichomecss/hover
+ *= require publichomecss/owl
+ *= require publichomecss/jquery-ui
+ *= require publichomecss/monthly
+ *= require publichomecss/jquery.timepicker
+ *= require publichomecss/jquery.fancybox.min
+ *= require publichomecss/jquery.mCustomScrollbar.min
  *= require publichomecss/style
  *= require publichomecss/responsive
  *= require publichomecss/color-switcher-design
  *= require publichomecss/default-theme
- *= require publichomecss/bootstrap
  */
