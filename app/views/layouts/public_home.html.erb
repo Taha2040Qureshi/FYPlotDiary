@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlotDiary</title>
+  <%= stylesheet_link_tag    'publichome', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'publichome', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+  
+    <header class="main-header style-v1">
+      
+        <!--Header Top-->
+      <div class="header-top">
+            <div class="outer-container">
+                <div class="row clearfix">
+                    <!--Top Left-->
+                    <div class="top-left col-md-4 col-sm-12 col-xs-12">
+                        <ul class="clearfix">
+                          <li>welcome to Home</li>
+                        </ul>
+                    </div>
+                    <!--Top Right-->
+                    <div class="top-right pull-right col-md-8 col-sm-12 col-xs-12">
+                      <ul class="social-nav">
+                          <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                      <ul class="list">
+                          <li><span class="icon fa fa-phone"></span>(+05) 025 024 0245</li>
+                            <li><a href="#"><span class="icon fa fa-envelope"></span>example.12@domain.com</a></li>
+                            <li><a href="login.html" class="theme-btn btn-style-one" style="    padding: 3px 3px 3px 6px;
+    font-size: 15px;
+    border-radius: 16%;">Login</a></li>
+                             
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Box -->
+      <div class="main-box">
+            <div class="outer-container clearfix">
+                <!--Logo Box-->
+                <div class="logo-box">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                </div>
+                
+                <!--Nav Outer-->
+                <div class="nav-outer clearfix">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->      
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                             
+                                
+                             <li><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About Us</a></li>
+                               
+                             <li><a href="plot-info.html">Plotes On Sale</a></li>
+                            <li><a href="House-info.html">House On Sale</a></li>
+                                        <li><a href="town-info.html">Towns</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                             </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                    
+                    <!--Options Box-->
+                    <div class="options-box">
+                        <ul class="options-nav">
+                            
+                            <!--Search Box-->
+                            <li class="search-box-outer">
+                                <div class="dropdown">
+                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                        <li class="panel-outer">
+                                            <div class="form-container">
+                                                <form method="post" action="http://themebunch.com/html/sproperty/blog.html">
+                                                    <div class="form-group">
+                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-btn hidden-bar-opener"><span class="flaticon-menu-button-of-three-lines"></span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!--Nav Outer End-->
+                
+            </div>
+        </div>
+    
+      <!--Sticky Header-->
+        <div class="sticky-header">
+          <div class="auto-container">
+              
+                <div class="outer-container clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box pull-left">
+                        <div class="logo"><a href="index.html"><img src="images/logo-small.png" alt=""></a></div>
+                    </div>
+                    
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    
+                                       <li><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About Us</a></li>
+                                <li><a href="features.html">Features</a></li>
+                            <li><a href="gallery.html">Plotes On Sale</a></li>
+                            <li><a href="gallery.html">House On Sale</a></li>
+                                        <li><a href="blog-grid.html">Our Blog</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                    </div>
+                    <!--Nav Outer End-->
+                    
+              </div>
+                
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    
+    </header>
+
+    <%= yield %>
+   <!--Main Footer-->
+    <footer class="main-footer">
+      <div class="auto-container">
+        
+          <!--Widgets Section-->
+            <div class="widgets-section">
+              <div class="row clearfix">
+                  
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                <div class="footer-widget logo-widget">
+                  <div class="logo">
+                                      <a href="index.html"><img src="images/footer-logo.png" alt="" /></a>
+                                    </div>
+                                    <div class="text">Nulla ac nunc eget ante consectetur lobortis a vel orci. Vivamus nibh est condimentum ac metus nec, gravida varius diam.</div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-vimeo-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                  <div class="footer-title">
+                                    <h2>Quick Links</h2>
+                                    </div>
+                                    <ul class="footer-lists">
+                                        <li><a href="#">Service</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Advance Sarch</a></li>
+                                        <li><a href="#">Site Map</a></li>
+                                        <li><a href="#">Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget tweet-widget">
+                                  <div class="footer-title">
+                                    <h2>Twitter Feed</h2>
+                                    </div>
+                                    <div class="twitter-widget">
+                                      <div class="inner">
+                                          <div class="icon"><span class="fa fa-twitter"></span></div>
+                                            <div class="text"><span>@Tanin_JIm</span> Nam ultricies enim ut ex maximus, eu pellentesque urna lacinia blandit urna. <a href="#">http://www.twitterlink.com</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="twitter-widget">
+                                      <div class="inner">
+                                          <div class="icon"><span class="fa fa-twitter"></span></div>
+                                            <div class="text"><span>@Tanin_JIm</span> Nam ultricies enim ut ex maximus, eu pellentesque urna lacinia blandit urna. <a href="#">http://www.twitterlink.com</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget gallery-widget">
+                                  <div class="footer-title">
+                                    <h2>Instagram</h2>
+                                    </div>
+                                    <div class="widget-content">
+                                      <div class="images-outer clearfix">
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/1.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-1.jpg" alt=""></figure>
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/2.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-2.jpg" alt=""></figure>
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/3.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-3.jpg" alt=""></figure>
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/4.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-4.jpg" alt=""></figure>
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/1.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-5.jpg" alt=""></figure>
+                                            <!--Image Box-->
+                                            <figure class="image-box"><a href="images/gallery/2.jpg" class="lightbox-image overlay-box" data-caption="" data-fancybox="images" title="Image Title Here" data-fancybox-group="footer-gallery"></a><img src="images/gallery/footer-thumb-6.jpg" alt=""></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+         </div>
+         
+      <!--Footer Bottom-->
+        <div class="footer-bottom">
+          <div class="row clearfix">
+              <div class="column col-md-6 col-sm-12 col-xs-12">
+                  <div class="copyright">Designed by <a target="_blank" href="https://themeforest.net/user/yogsthemes/portfolio">YogsThemes</a> | Powered by WordPress</div>
+                </div>
+                <div class="nav-column col-md-6 col-sm-12 col-xs-12">
+                  <ul class="footer-nav">
+                      <li><a href="#">HomE</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  </div>
+  </body>
+</html>
