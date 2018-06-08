@@ -11,11 +11,14 @@
 // about supported directives.
 //
 //= require publichomejs/jquery
+//= require turbolinks
 //= require publichomejs/jquery.themepunch.revolution.min
 //= require publichomejs/jquery.themepunch.tools.min
 //= require publichomejs/revolution.extension.actions.min
 //= require publichomejs/revolution.extension.carousel.min
+//= require publichomejs/revolution.extension.kenburn.min
 //= require publichomejs/revolution.extension.layeranimation.min
+//= require publichomejs/revolution.extension.migration.min
 //= require publichomejs/revolution.extension.navigation.min
 //= require publichomejs/revolution.extension.parallax.min
 //= require publichomejs/revolution.extension.slideanims.min
@@ -29,5 +32,4 @@
 //= require publichomejs/isotope
 //= require publichomejs/script
 //= require publichomejs/color-settings
-
-
+//= require_tree ./publichomejs
