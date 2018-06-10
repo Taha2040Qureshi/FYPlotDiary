@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
 
   
+  get 'towns/index'
+
+  get 'town_details/index'
+
+  get 'sale_plot_details/index'
+
+  get 'sale_plots/index'
+
+  get 'sale_house_details/index'
+
+  get 'sale_houses/index'
+
+  get 'contact_us/index'
+
+  get 'about/index'
+
  root 'public_home#index'
  
  get 'complaintportal/index'
