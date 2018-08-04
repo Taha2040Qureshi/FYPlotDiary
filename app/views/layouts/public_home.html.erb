@@ -11,7 +11,7 @@
 
   <div class="page-wrapper">
 
-    <header class="main-header style-v1">
+    <header class="main-header style-v1" style="    background: rgba(38,94,145);">
 
       <!--Header Top-->
       <div class="header-top">
@@ -33,10 +33,6 @@
               <ul class="list">
                 <li><span class="icon fa fa-phone"></span>(+05) 025 024 0245</li>
                 <li><a href="#"><span class="icon fa fa-envelope"></span>example.12@domain.com</a></li>
-                <li><a href="login.html" class="theme-btn btn-style-one" style="    padding: 3px 3px 3px 6px;
-                font-size: 15px;
-                border-radius: 16%;">Login</a></li>
-
               </ul>
             </div>
           </div>
@@ -48,7 +44,9 @@
         <div class="outer-container clearfix">
           <!--Logo Box-->
           <div class="logo-box">
-            <div class="logo"><a href="index.html"><%= image_tag("logo.png", alt: "")%></a></div>
+            <div class="logo">
+                <%= link_to image_tag("logo.png", border: 0), {action: 'index', controller: 'public_home'}, {class: 'dock-item'} %>
+             </div>
           </div>
 
           <!--Nav Outer-->
@@ -66,15 +64,10 @@
 
               <div class="navbar-collapse collapse clearfix">
                 <ul class="navigation clearfix">
-
-
-                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About Us</a></li>
-
-                 <li><a href="plot-info.html">Plotes On Sale</a></li>
-                 <li><a href="House-info.html">House On Sale</a></li>
-                 <li><a href="town-info.html">Towns</a></li>
-                 <li><a href="contact.html">Contact us</a></li>
+                 <li><%= link_to 'Home', root_path %></li>
+                 <li><%= link_to 'PLot On Sale',  sale_plots_index_path %></li>
+                 <li><%= link_to 'About Us', about_index_path %></li>
+                 <li><%= link_to 'Contact Us',  contact_us_index_path %></li>
                </ul>
              </div>
            </nav>
@@ -87,19 +80,6 @@
               <!--Search Box-->
               <li class="search-box-outer">
                 <div class="dropdown">
-                  <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                  <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                    <li class="panel-outer">
-                      <div class="form-container">
-                        <form method="post" action="http://themebunch.com/html/sproperty/blog.html">
-                          <div class="form-group">
-                            <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                          </div>
-                        </form>
-                      </div>
-                    </li>
-                  </ul>
                 </div>
               </li>
               <li class="menu-btn hidden-bar-opener"><span class="flaticon-menu-button-of-three-lines"></span></li>
@@ -137,14 +117,10 @@
 
               <div class="navbar-collapse collapse clearfix">
                 <ul class="navigation clearfix">
-
-                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About Us</a></li>
-                 <li><a href="features.html">Features</a></li>
-                 <li><a href="gallery.html">Plotes On Sale</a></li>
-                 <li><a href="gallery.html">House On Sale</a></li>
-                 <li><a href="blog-grid.html">Our Blog</a></li>
-                 <li><a href="contact.html">Contact us</a></li>
+                  <li><%= link_to 'Home', root_path %></li>
+                 <li><%= link_to 'PLot On Sale',  sale_plots_index_path %></li>
+                 <li><%= link_to 'About Us', about_index_path %></li>
+                 <li><%= link_to 'Contact Us',  contact_us_index_path %></li>
                </ul>
              </div>
            </nav>
@@ -191,51 +167,12 @@
                 </ul>
               </div>
             </div>
-
-            <!--Footer Column-->
-            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
-              <div class="footer-widget links-widget">
-                <div class="footer-title">
-                  <h2>Quick Links</h2>
-                </div>
-                <ul class="footer-lists">
-                  <li><a href="#">Service</a></li>
-                  <li><a href="#">Wishlist</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Advance Sarch</a></li>
-                  <li><a href="#">Site Map</a></li>
-                  <li><a href="#">Support</a></li>
-                </ul>
-              </div>
-            </div>
-            
           </div>
         </div>
 
         <!--big column-->
         <div class="big-column col-md-6 col-sm-12 col-xs-12">
           <div class="row clearfix">
-
-            <!--Footer Column-->
-            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
-              <div class="footer-widget tweet-widget">
-                <div class="footer-title">
-                  <h2>Twitter Feed</h2>
-                </div>
-                <div class="twitter-widget">
-                  <div class="inner">
-                    <div class="icon"><span class="fa fa-twitter"></span></div>
-                    <div class="text"><span>@Tanin_JIm</span> Nam ultricies enim ut ex maximus, eu pellentesque urna lacinia blandit urna. <a href="#">http://www.twitterlink.com</a></div>
-                  </div>
-                </div>
-                <div class="twitter-widget">
-                  <div class="inner">
-                    <div class="icon"><span class="fa fa-twitter"></span></div>
-                    <div class="text"><span>@Tanin_JIm</span> Nam ultricies enim ut ex maximus, eu pellentesque urna lacinia blandit urna. <a href="#">http://www.twitterlink.com</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <!--Footer Column-->
             <div class="footer-column col-md-6 col-sm-6 col-xs-12">
@@ -302,12 +239,10 @@
       </div>
       <div class="nav-column col-md-6 col-sm-12 col-xs-12">
         <ul class="footer-nav">
-          <li><a href="#">HomE</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+             <li><%= link_to 'Home', root_path %></li>
+             <li><%= link_to 'PLot On Sale',  sale_plots_index_path %></li>
+             <li><%= link_to 'About Us', about_index_path %></li>
+             <li><%= link_to 'Contact Us',  contact_us_index_path %></li>
         </ul>
       </div>
     </div>

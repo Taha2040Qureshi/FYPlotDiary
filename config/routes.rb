@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+
+  root 'public_home#index'
   
-  get 'towns/index'
+  # get 'towns/index'
 
   get 'town_details/index'
 
@@ -16,8 +18,6 @@ Rails.application.routes.draw do
   get 'contact_us/index'
 
   get 'about/index'
-
- root 'public_home#index'
  
  get 'complaintportal/index'
   resources :maps

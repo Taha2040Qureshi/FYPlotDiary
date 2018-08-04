@@ -56,7 +56,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem "pg", "~> 0.18"
+  # gem "pg", "~> 0.18"
   gem 'exception_notification'
 end
 
