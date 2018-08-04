@@ -1,0 +1,31 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require publichomecss/bootstrap
+ *= require publichomecss/settings
+ *= require publichomecss/layers
+ *= require publichomecss/navigation
+ *= require publichomecss/font-awesome
+ *= require publichomecss/flaticon
+ *= require publichomecss/animate
+ *= require publichomecss/hover
+ *= require publichomecss/owl
+ *= require publichomecss/jquery-ui
+ *= require publichomecss/monthly
+ *= require publichomecss/jquery.timepicker
+ *= require publichomecss/jquery.fancybox.min
+ *= require publichomecss/jquery.mCustomScrollbar.min
+ *= require publichomecss/style
+ *= require publichomecss/responsive
+ *= require publichomecss/color-switcher-design
+ *= require publichomecss/default-theme
+ */

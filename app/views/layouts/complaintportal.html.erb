@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>loop</title>
+  <%= stylesheet_link_tag    'complaintportal' , media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'complaintportal' , 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+ <body>
+     
+        <div class="container container-wrapper">
+            <header class="header">
+                <div class="top-box" data-toggle="sticky-onscroll">
+                    <div class="container">
+                        <div  class="top-bar color-primary">
+                            <div class="container clearfix">
+                                <div class="pull-left">
+                                    <ul class="login-menu clearfix">
+                                        <li><a href="mylistings.html"><i class="fa fa-user"></i> My Properties</a></li>
+                                        <li><a href="login.html"><i class="fa fa-power-off"></i> Login</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pull-right">
+                                   
+                                </div>
+                            </div>
+                        </div><!-- /.top-bar-->
+                        <section class="header-inner">
+                            <div class="container">
+                                <div class="logo pull-left pull-sm-up col-sm-6 col-xs-12  text-left">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo.png" alt="" />
+                                        <img src="assets/img/logo_mini.png" alt="" class="mini-logo" />
+                                    </a>
+                                </div>
+                               
+                                <div class="pull-right menu"> 
+                                    <div class="box-navigaion clearfix">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                       
+                                    <nav class="navbar text-color-primary">
+                                        <!-- Links -->
+                                        <div class="collapse navbar-collapse" id="main-menu">
+                                            <ul class="nav navbar-nav clearfix">
+                                                <li class="nav-item dropdown">
+                                                   <a class="dropdown-item active" href="index.html">Standard
+                                                        <i class="icon-dropdown"></i>
+                                                    </a>
+                                                      
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                   
+                                               <a class="dropdown-item" href="map_side2.html">Complain</a>
+                                                   
+                                                </li>
+                                              <li class="nav-item dropdown">
+                                                   
+                                               <a class="dropdown-item" href="map_side2.html">Suggestion</a>
+                                                   
+                                                </li>
+                                                 <li class="nav-item dropdown">
+                                                   
+                                               <a class="dropdown-item" href="map_side2.html">Contact Us</a>
+                                                   
+                                                </li>
+                                               
+                                           
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </section><!-- /.menu-->
+                    </div> 
+                </div>
+                <div class="top-box-mask"></div>
+              </section>
+              </div>
+            </header>
+       
+   
+    <%= yield %>
+   <footer class="footer">
+                <div class="container footer-mask">
+                    <div class="container footer-contant">
+                        <div class="row">
+                            <div class="col-md-3 hidden-sm hidden-xs">
+                                <div class="logo"><a href="#"><img src="assets/img/logo_white.png" alt="" /></a></div>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="title">
+                                    <h4>Contact</h4>
+                                </div>
+                                <ul class="list list-contact  list-news">
+                                    <li>ClassifiedPlace,
+                                        Ilica 345,
+                                        HR-10000 Zagreb</li>
+                                    <li><i class="fa fa-phone"></i> +385 (0)1 123 321</li>
+                                    <li><i class="fa fa-phone"></i>  +385 (0)1 123 322</li>
+                                    <li><i class="fa fa-envelope"></i>  info@my-website.com</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6  hidden-sm hidden-xs">
+                                <div class="title">
+                               
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                            
+                            </div>
+                        </div>
+                    </div><!-- /.footer-content -->
+                    <div class="footer-bottom">
+                        <div class="container text-right">
+                            <span class=""><a href="#">WINTER &#169; 2016</a></span>
+                        </div>
+                    </div><!-- /.footer-bottom --> 
+                </div>
+            </footer>
+</div>
+  
+  </body>
+</html>

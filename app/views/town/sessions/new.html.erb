@@ -1,0 +1,27 @@
+  <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
+    <div class="container aside-xxl">
+      
+     <div style = "padding-top:20%;">
+		<p class="navbar-brand block">SIGN IN</p>
+       <section class="panel panel-default m-t-lg bg-white">
+        
+         <%= form_for @user,:url => user_session_path, :html =>{:class=>"panel-body wrapper-lg"} do |f|  %>
+          
+           <div class="form-group">
+             <label class="control-label">Email</label>
+		<%= f.text_field :email, :class=>"form-control input-lg",:placeholder => "Email address" %>
+           </div>
+           <div class="form-group">
+             <label class="control-label">Password</label>
+            <%= f.password_field :password, :class=>"form-control input-lg",:placeholder => "Password" %>
+           </div>
+          
+           <%= f.submit :class=>"btn btn-primary pull-right",:value =>"LOGIN" %>
+          
+        <%end%>
+      </section>
+</div>
+    </div>
+  </section>
+ 
+  

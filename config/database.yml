@@ -1,0 +1,44 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: account_development1
+  username: root
+  password: root
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: account_test1
+  username: root
+  password: root
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: account_production
+  username: root
+  password: root
+  host: localhost
+#development:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: myapp1_development
+#  pool: 5
+#  username: rehanmunir
+#  password:
+#test:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: myapp1_test
+#  pool: 5
+#  username: rehanmunir
+#  password:
+#production:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: townsonline_production
+#  pool: 5
+#  username: townsonline
+#  password:
