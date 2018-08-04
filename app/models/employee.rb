@@ -5,9 +5,9 @@ class Employee < ActiveRecord::Base
 
   accepts_nested_attributes_for :address
 
-  validates :name, presence: true
-  validates :f_name, presence: true
-  validates :cnic, presence: true
+  validates :name, presence: true, length: {minimum: 3, maximum: 25}
+  validates :f_name, presence: true,length: {minimum: 3, maximum: 25}
+  validates :cnic ,presence: true , uniqueness: {case_sensitive: false},length: { is: 15} 
   validates :town_id, presence: true
   validates :salary, presence: true
 end
