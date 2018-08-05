@@ -255,6 +255,30 @@
           </ul>
         </li>
 
+        <%if current_user.user_type =='admin'%>
+          <li <%if is_active('contact_us')%>class="active"<%end%>>
+            <a href="#layout">
+              <i class="fa fa-list-alt icon">
+                <b class="bg-primary"></b>
+              </i>
+              <span class="pull-right">
+               <%=raw is_active('contact_us') ? '<i class="fa text fa-angle-right"></i>' : '<i class="fa fa-angle-down text"></i>'%>
+                  <!--<i class="fa fa-angle-down text"></i>-->
+                  <!--<i class="fa fa-angle-up text-active"></i>-->
+              </span>
+              <span>Contacts US</span>
+            </a>
+            <ul class="nav lt">
+              <li>
+                <a href="<%=town_contact_us_path%>" >
+                  <i class="fa fa-angle-right"></i>
+                  <span>All Contacts</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <% end %>
+
 
         <li <%if is_active('submit_installments')%>class="active"<%end%>>
           <a href="#layout">

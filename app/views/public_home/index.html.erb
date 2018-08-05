@@ -61,13 +61,13 @@
                     <div class="home-detail">
                         <div class="inner">
                             <h3>Luxurious PLot</h3>
-                            <div class="text">2560 Lorem Ave, San Diego, USA</div>
+                            <div class="text"><%= "Block: #{@plots.last.plot_number}, Street: #{@plots.last.street}, #{@plots.last.town.name}"%></div>
                             <ul class="home-list">
-                                <li>2,300<span>Area Sq-ft</span></li>
-                                <li>4<span>Bed Room</span></li>
-                                <li>2<span>Kitchen</span></li>
+                                <li><%= "#{@plots.last.area.to_i}" %><span>Area Sq-ft</span></li>
+                                <li><%= "#{@plots.last.width.to_i}" %><span>Width-ft</span></li>
+                                <li><%= "#{@plots.last.length.to_i}" %><span>Length-ft</span></li>
                             </ul>
-                            <div class="price">$54,210.00</div>
+                            <div class="price">$<%= "#{@plots.last.total_price.to_i}"%></div>
                             <div class="btns-box">
                                 <a href="agents-single.html" class="theme-btn btn-style-one">Contact Agent</a>
                             </div>
@@ -113,11 +113,11 @@
                                 <div class="content-column col-md-6 col-sm-12 col-xs-12">
                                     <div class="inner-column">
                                         <h3>Plot Details</h3>
-                                        <div class="text">Trust fund 8-bit bitters venmo, synth microdosing tacos pabst gentrify coloring book narwhal sustainable.</div>
+                                        <div class="text"><%="#{@plots.last(2).first.description}"%></div>
                                         <ul class="list-style-one">
-                                            <li><span class="icon flaticon-dimension"></span>Area 5 Marla</li>
-                                            <li><span class="icon flaticon-sofa"></span>Price </li>
-                                            <li><span class="icon flaticon-frame"></span> Town</li>
+                                            <li><span class="icon flaticon-dimension"></span><%="#{@plots.last(2).first.area.to_i}"%></li>
+                                            <li><span class="icon flaticon-sofa"></span><%="#{@plots.last(2).first.total_price.to_i}"%> </li>
+                                            <li><span class="icon flaticon-frame"></span><%="#{@plots.last(2).first.town.name}"%></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                 <div class="image-column col-md-6 col-sm-12 col-xs-12">
                                     <div class="image">
                                         <%= image_tag("resource/measurement.jpg", alt: "")%>
-                                        <div class="measurement-size"><div class="text">12ft x 10ft</div></div>
+                                        <div class="measurement-size"><div class="text"><%="#{@plots.last(2).first.length.to_i}ft x #{@plots.last(2).first.width.to_i}ft" %></div></div>
                                     </div>
                                 </div>
                             </div>
@@ -570,41 +570,20 @@
         <div class="row clearfix">
 
             <!--News Block-->
-            <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-box wow fadeInUp">
-                    <div class="image">
-                    </div>
-                    <div class="lower-content">
-                         <h3><%= link_to 'Luxury Plot $1500 lifetime',{"controller"=>"sale_plot_details", "action"=>"index"}%></h3>
-                        <div class="post-date">Post Time <span>10:00PM</span></div>
-                        <div class="text">Tristique pellentesque quis eu eros. Cras bibendum posuere luctus. Etiam convallis maximus metus ornare blandit massa cursus.</div>
-                    </div>
-                </div>
-            </div>
-        <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-box wow fadeInUp">
-                    <div class="image">
-                       <%= link_to image_tag("resource/news-8.jpg", border: 0), {action: 'index', controller: 'sale_plot_details'}, {class: 'dock-item'} %>
-                    </div>
-                    <div class="lower-content">
-                         <h3><%= link_to 'Luxury Plot $1500 lifetime',{"controller"=>"sale_plot_details", "action"=>"index"}%></h3>
-                        <div class="post-date">Post Time <span>10:00PM</span></div>
-                        <div class="text">Tristique pellentesque quis eu eros. Cras bibendum posuere luctus. Etiam convallis maximus metus ornare blandit massa cursus.</div>
+            <% @plots.first(3).each do |plot|%>
+                <div class="news-block col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box wow fadeInUp">
+                        <div class="image">
+                           <%= link_to image_tag("resource/news-8.jpg", border: 0), {action: 'index', controller: 'sale_plot_details'}, {class: 'dock-item'} %>
+                        </div>
+                        <div class="lower-content">
+                             <h3><%= link_to "Luxury Plot in #{plot.town.name}",{"controller"=>"sale_plot_details", "action"=>"index", "id" => "#{plot.id}"}%></h3>
+                            <div class="post-date">Price $<span><%= plot.total_price.to_i %></span></div>
+                            <div class="text"><%= plot.description %></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-             <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-box wow fadeInUp">
-                    <div class="image">
-                       <%= link_to image_tag("resource/news-8.jpg", border: 0), {action: 'index', controller: 'sale_plot_details'}, {class: 'dock-item'} %>
-                    </div>
-                    <div class="lower-content">
-                         <h3><%= link_to 'Luxury Plot $1500 lifetime',{"controller"=>"sale_plot_details", "action"=>"index"}%></h3>
-                        <div class="post-date">Post Time <span>10:00PM</span></div>
-                        <div class="text">Tristique pellentesque quis eu eros. Cras bibendum posuere luctus. Etiam convallis maximus metus ornare blandit massa cursus.</div>
-                    </div>
-                </div>
-            </div>
+            <% end %>
 
         </div>
     </div>
@@ -638,22 +617,22 @@
                     <h2>Contact With Us</h2>
                     <!--Default Form-->
                     <div class="default-form">
-                        <form method="post" action="http://themebunch.com/html/sproperty/contact.html">
+                        <%= form_for @contactu, :url => town_contact_us_path do |f|  %>
                             <div class="row clearfix">
                                 <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                    <input type="text" name="text" value="" placeholder="Name" required>
+                                    <%= f.text_field :name, placeholder: "Name", required: true %>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                    <input type="email" name="email" value="" placeholder="Email" required>
+                                    <%= f.email_field :email, placeholder: "Email", required: true %>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                    <textarea placeholder="Message"></textarea>
+                                    <%= f.text_area :message, placeholder: "Message", required: true %>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                    <button type="submit" class="theme-btn btn-style-one">Send Message</button>
+                                    <%= f.submit "Send Message", :class => "theme-btn btn-style-one" %>
                                 </div>
                             </div>
-                        </form>
+                        <% end %>
                     </div>
                     <!--End Default Form-->
                 </div>
