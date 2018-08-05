@@ -55,15 +55,6 @@ ActiveRecord::Schema.define(version: 20180805212013) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "complain_portals", force: :cascade do |t|
-    t.string   "subject",     limit: 255
-    t.integer  "town_id",     limit: 4
-    t.text     "discription", limit: 65535
-    t.string   "status",      limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
-
   create_table "contact_us", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.string   "email",      limit: 255
@@ -124,21 +115,6 @@ ActiveRecord::Schema.define(version: 20180805212013) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
-
-  create_table "houses", force: :cascade do |t|
-    t.integer  "stories",     limit: 4
-    t.integer  "bed",         limit: 4
-    t.integer  "bathroom",    limit: 4
-    t.integer  "kitchen",     limit: 4
-    t.integer  "total_price", limit: 4
-    t.integer  "plot_id",     limit: 4
-    t.integer  "town_id",     limit: 4
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  add_index "houses", ["plot_id"], name: "index_houses_on_plot_id", using: :btree
-  add_index "houses", ["town_id"], name: "index_houses_on_town_id", using: :btree
 
   create_table "installments", force: :cascade do |t|
     t.boolean  "status"
@@ -266,6 +242,4 @@ ActiveRecord::Schema.define(version: 20180805212013) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "houses", "plots"
-  add_foreign_key "houses", "towns"
 end
