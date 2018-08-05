@@ -61,13 +61,14 @@
                     <div class="home-detail">
                         <div class="inner">
                             <h3>Luxurious PLot</h3>
-                            <div class="text">2560 Lorem Ave, San Diego, USA</div>
+                            <%debugger%>
+                            <div class="text"><%= "Block: #{@plots.last.plot_number}, Street: #{@plots.last.street}, #{@plots.last.town.name}"%></div>
                             <ul class="home-list">
-                                <li>2,300<span>Area Sq-ft</span></li>
-                                <li>4<span>Bed Room</span></li>
-                                <li>2<span>Kitchen</span></li>
+                                <li><%= "#{@plots.last.area.to_i}" %><span>Area Sq-ft</span></li>
+                                <li><%= "#{@plots.last.width.to_i}" %><span>Width-ft</span></li>
+                                <li><%= "#{@plots.last.length.to_i}" %><span>Length-ft</span></li>
                             </ul>
-                            <div class="price">$54,210.00</div>
+                            <div class="price">$<%= "#{@plots.last.total_price.to_i}"%></div>
                             <div class="btns-box">
                                 <a href="agents-single.html" class="theme-btn btn-style-one">Contact Agent</a>
                             </div>
