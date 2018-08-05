@@ -1,5 +1,8 @@
-class Town::ContactUsController < ApplicationController
+class Town::ContactUsController < Town::BaseController
   
+  def index
+    @contacts = ContactU.all
+  end
 
   def create 
     @contact_u = ContactU.new(contact_u_params)
@@ -12,8 +15,6 @@ class Town::ContactUsController < ApplicationController
     end
   end
   
-  def index
-  end
 
   private
 
