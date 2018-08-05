@@ -125,7 +125,7 @@
                                 <div class="image-column col-md-6 col-sm-12 col-xs-12">
                                     <div class="image">
                                         <%= image_tag("resource/measurement.jpg", alt: "")%>
-                                        <div class="measurement-size"><div class="text">12ft x 10ft</div></div>
+                                        <div class="measurement-size"><div class="text"><%="#{@plots.last(2).first.length.to_i}ft x #{@plots.last(2).first.width.to_i}ft" %></div></div>
                                     </div>
                                 </div>
                             </div>
