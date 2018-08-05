@@ -1,0 +1,2 @@
+module Town::ContactUsHelper
+end

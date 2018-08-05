@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   root 'public_home#index'
   
   # get 'towns/index'
@@ -45,6 +44,7 @@ Rails.application.routes.draw do
     resources :investments
     resources :land_masters
     resources :plots
+    resources :contact_us
     get 'plots/map'
     resources :stake_holders
     resources :submit_installments do
