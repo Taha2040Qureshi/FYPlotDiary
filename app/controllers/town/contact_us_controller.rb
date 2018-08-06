@@ -1,10 +1,12 @@
 class Town::ContactUsController < Town::BaseController
   
+  skip_before_filter :authenticate_user!
+  
   def index
     @contacts = ContactU.all
   end
 
-  def create 
+  def create
     @contact_u = ContactU.new(contact_u_params)
     if @contact_u.save
       flash[:success] = "Message Submitted"
