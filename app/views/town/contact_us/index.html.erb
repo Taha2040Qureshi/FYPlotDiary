@@ -1,0 +1,40 @@
+<section id="content">
+  <section class="vbox">
+    <section class="scrollable padder">
+
+      <section class="panel panel-default">
+        <header class="panel-heading" style="overflow:auto;background:#FFF;">
+          <h4 style="margin-bottom:0px;"> Contact US </h4>
+
+          <%= render :partial =>"shared/flash_messages"%>
+          <i data-title="ajax to load the data." data-placement="bottom" data-toggle="tooltip" class="fa fa-info-sign text-muted" data-original-title="" title=""></i>
+
+        </header>
+
+        <div class="table-responsive">
+          <table class="table table-striped m-b-none" data-ride="datatables" style="font-size:15px;font-weight:300!important;">
+            <thead>
+            <tr>
+              <th style="font-weight:500;">Name</th>
+              <th style="font-weight:500;">Email</th>
+              <th style="font-weight:500;">Message </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @contacts.each do |e|%>
+                <tr>
+                  <td><%=e.name%></td>
+                  <td><%=e.email%></td>
+                  <td><%=e.message%></td>
+                </tr>
+            <%end%>
+            </tbody>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </section>
+  <a data-target="#nav" data-toggle="class:nav-off-screen" class="hide nav-off-screen-block" href="#"></a>
+</section>
