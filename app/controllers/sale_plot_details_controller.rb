@@ -4,5 +4,6 @@ class SalePlotDetailsController < ApplicationController
 
   def index
     @plot = Plot.find(params[:id])
+    @contactu = ContactU.new
   end
 end
