@@ -22,6 +22,22 @@ class Town::InvestmentsController < Town::BaseController
     render :new
   end
 
+  def edit
+    debugger
+    @stake_holder = current_town.stake_holders.where(:id => params[:id]).first
+  end
+
+  def update
+    @stake_holder = current_town.stake_holders.find(params[:id])
+    if @stake_holder.update_attributes(stake_holder_params)
+      flash[:success] = "Stake Holder datails has been updated!"
+      return redirect_to town_stake_holders_path
+    else
+      flash.now[:errors] = @stake_holder.errors.full_messages
+    end
+    render :edit
+  end
+
   def destroy
     investment = current_town.investments.where(:id => params[:id]).first
     investment.destroy

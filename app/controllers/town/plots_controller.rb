@@ -22,6 +22,20 @@ class Town::PlotsController < Town::BaseController
     render :new
   end
 
+  def edit
+    @plot = current_user.town.plots.find(params[:id])
+  end
+
+  def update
+    @plot = current_user.town.plots.find(params[:id])
+    if @plot.update_attributes(plot_params)
+      flash[:success] = "Plot datails has been updated!"
+      return redirect_to town_plots_path
+    else
+      flash.now[:errors] = @plot.errors.full_messages
+    end
+    render :edit
+  end
 
   def destroy
     plot = current_town.plots.where(:id => params[:id]).first

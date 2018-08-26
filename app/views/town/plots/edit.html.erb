@@ -5,10 +5,10 @@
         <%= render :partial =>"shared/flash_messages"%>
         <section class="panel panel-default">
           <header class="panel-heading" style="background:#FFF;">
-            <h3 style="color:#717171;">Add New Plot </h3>
+            <h3 style="color:#717171;">Edit Plot Details </h3>
           </header>
           <div class="panel-body">
-            <%= form_for @plot,validate: true, :url=>town_plots_path ,:html =>{:class=>"panel-body wrapper-lg"} do |f|  %>
+            <%= form_for @plot, :url=> town_plot_path ,:html =>{:class=>"panel-body wrapper-lg"} do |f|  %>
 
                 <div class="form-group">
                   <%= f.hidden_field :town_id, value: current_user.town.id %>
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="form-group">
-                    <%= f.submit :class=>"btn btn-primary",:value=>"Add" %>
+                    <%= f.submit :class=>"btn btn-primary",:value=>"UPDATE" %>
                     <%= button_tag "Cancel", :type => 'reset',:class=>"btn" %>
                 </div>
             <% end %>
