@@ -8,9 +8,9 @@ class Customer < ActiveRecord::Base
   accepts_nested_attributes_for :address
   accepts_nested_attributes_for :installment
   
-  validates :name, presence: true ,length: {minimum: 3, maximum: 25}
-  validates :f_name, presence: true ,length: {minimum: 3, maximum: 25} 
-  validates :cnic, presence: true ,uniqueness: {case_sensitive: false},length: { is: 15} 
+  validates :name, presence: true ,length: {minimum: 3, maximum: 25, message: "length must be greater than 3 and less than 25"}, format: { with:  /\A[a-zA-Z]+\z/, message: "required only alphabet"}
+  validates :f_name, presence: true ,length: {minimum: 3, maximum: 25, message: "length must be greater than 3 and less than 25"}, format: { with:  /\A[a-zA-Z]+\z/, message: "required only alphabet"} 
+  validates :cnic, presence: true ,length: { is: 13 , message: "must be conatin 13 number "}, format: { with: /\A\d+\z/, message: "Integer only. No sign allowed." }
   validates :plot_id, presence: true
   validates :town_id, presence: true
 

@@ -2,8 +2,8 @@ class Investment < ActiveRecord::Base
   belongs_to :town
   belongs_to :stake_holder
 
-  validates :amount, presence: true
-  validates  :stake_holder, presence: true
+  validates :amount, presence: true , numericality: { only_integer: true , message: "Integer only"}
+  validates  :stake_holder, presence: true , numericality: { only_integer: true , message: "Integer only"}
 
   after_create :add_payment
 
