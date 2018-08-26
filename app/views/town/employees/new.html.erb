@@ -32,7 +32,7 @@
 
                 <div class="form-group">
                   <label class=" control-label">Designation</label>
-                    <%= f.text_field :designation , :class=>"form-control  input-lg",placeholder:"Enter Designation"%>
+                    <%= f.select :designation, ["manager", "electric person", "cleaner  "], {:prompt => "Enter Designation"}, {:class=>"form-control"}%>
                 </div>
 
                 <div class="form-group">
