@@ -44,3 +44,40 @@
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+.dollar-input-icon {
+  position: relative;
+}
+.dollar-input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 67%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+       height: 45px;
+}
+.dollar-input-icon > input {
+  padding-left: 60px;
+  padding-right: 0;
+}
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+     width: 100%;
+    padding: 10px;
+    outline: none;
+   
+}
+.icon2 {
+        padding: 0px;
+    background: #adb0b3;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    font-size: 19px;
+    padding-top: 12px;
+}
