@@ -32,7 +32,7 @@ class Town::StakeHoldersController < Town::BaseController
   end
 
   def update
-    @stake_holder = current_town.stake_holders.where(:id => params[:id]).first
+    @stake_holder = current_town.stake_holders.find(params[:id])
     if @stake_holder.update_attributes(stake_holder_params)
       flash[:success] = "Stake Holder datails has been updated!"
       return redirect_to town_stake_holders_path
